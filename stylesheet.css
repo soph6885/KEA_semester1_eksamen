@@ -1,0 +1,943 @@
+body {
+    /*font-family: 'Major Mono Display', monospace;*/
+    margin: 0;
+    font-family: 'Nanum Myeongjo', serif;
+    background-color: #ffffff;
+}
+
+section {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 2rem 2rem
+}
+
+footer {
+    padding: 0.6rem;
+    background-color: #F4A009;
+    padding-left: 2.5rem;
+}
+
+img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+
+/********** FOOTER *********/
+
+footer {
+    padding: 1.2rem;
+    background-color: #F4A009;
+}
+
+footer p {}
+
+.container_footer {
+    display: flex;
+    justify-content: center;
+}
+
+.column_footer {
+    padding: 0 0.5rem 0 0.5rem;
+}
+
+.fa {
+    padding: 15px;
+    font-size: 30px;
+    width: 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+/* instagram */
+.fa-instagram {
+    background: white;
+    color: black;
+}
+
+/* linkedin */
+.fa-linkedin {
+    background: white;
+    color: black;
+}
+
+.fa-instagram:hover {
+    background-image: linear-gradient(to bottom, #4c68d7, #8a3ab9, #e95950, #fbad50, #fccc63);
+    color: white;
+}
+
+.fa-linkedin:hover {
+    background: #007bb5;
+    color: white;
+}
+
+
+/*********************** NORMAL MENU ***********************/
+
+/* unvisited link */
+/* visited link */
+/* selected link */
+header nav a:link,
+header nav a:visited,
+header nav a:active {
+    color: black;
+}
+
+/* mouse over link */
+header nav a:hover {
+    color: #F4A009;
+
+}
+
+/* omslutter hele menubaren */
+header {
+    position: fixed;
+    /* position: fixed gør så menuen sætter sig fast ligegylding hvor du er på siden */
+    background-color: #ffffff;
+    width: 100%;
+    box-shadow: 1px 1px 5px #E3E3E3;
+
+}
+
+/* det der omslutter teksten */
+header nav {
+    flex-direction: column;
+    margin: 1.3rem;
+    text-align: right;
+}
+
+/* selve teksten */
+header nav a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.3rem;
+}
+
+/*********************** BURGER MENU ***********************/
+
+/* når burgermenuen er lukket */
+.hidden {
+    display: none;
+}
+
+#menu_knap {
+    display: inline-block;
+    padding-right: 0.5rem;
+}
+
+#menu_burger {
+    list-style-type: none;
+    /*  list-style-type: none gør at der ikke er punkter ud fra teksten */
+    margin-top: 1.1rem;
+}
+
+#menu_burger a {
+    padding-right: 0.5rem;
+}
+
+#menu_burger li {
+    margin: 0.5rem;
+}
+
+/* når burgermenuen skal udskiftes til normal menu får den klassen på */
+.hide_burgermenu {
+    display: none;
+}
+
+#menu_knap:hover {
+    color: #F4A009;
+    cursor: pointer;
+}
+
+/*Når skærmen er under og max 550px skal burgermenuen vises.*/
+@media only screen and (max-width:550px) {
+    .hide_burgermenu {
+        display: block;
+    }
+
+    .hide_menu {
+        display: none;
+    }
+}
+
+/*********************** FORSIDE LOGO ***********************/
+
+#forside {
+    max-width: none;
+    background-color: #F4A009;
+    /* her kan jeg evt. indsætte et splashbillede og lave parallex scroll på */
+}
+
+#text {
+    text-align: center;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+#text h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+    font-family: 'Caveat', cursive;
+}
+
+#text h4 {
+    margin-bottom: 0;
+}
+
+
+/*********************** OM MIG FORSIDE ***********************/
+
+#om_mig {
+    padding-bottom: 0;
+}
+
+
+#om_mig h2 {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+/* tekst under portrætbillede */
+#om_mig .column_narrow p {
+    font-family: 'Caveat', cursive;
+    font-size: 1.7rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+/*Omslutter både column_wide og column_narrow*/
+#om_mig .sectionwrapper {
+    display: flex;
+    /* gør så begge column ligger sig ved siden af hinanden*/
+    flex-wrap: wrap;
+}
+
+/*Box med teksten om mig*/
+#om_mig .column_wide {
+    flex-grow: 2;
+    /* gør så column_wide fylder dobbelt så meget som column_narrow */
+    flex-basis: 400px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/*Box/parrent til billede af mig*/
+#om_mig .column_narrow {
+    flex-grow: 1;
+    flex-basis: 200px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+/*Billedet af mig*/
+#potraet_billede {
+    background-image: url("materiale/potraetbillede.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 300px;
+    height: 300px;
+    margin: 1rem;
+}
+
+/*********************** @MEDIA --- OM MIG FORSIDE ***********************/
+
+/*Når skærmen er under og max 827px skal teksten være i venstre side under billedet*/
+@media only screen and (max-width:827px) {
+    #om_mig .column_narrow p {
+        text-align: left;
+    }
+}
+
+/*Når skærmen er under og max 504px skal teksten være centreret i midten under billedet*/
+@media only screen and (max-width:504px) {
+    #om_mig .column_narrow p {
+        text-align: center;
+    }
+
+}
+
+/*Når skærmen er over 844px har jeg tilføjet ekstra padding i højre side på boxen med tekst for at lave mellemrum mellem tekst og billede*/
+@media only screen and (min-width:844px) {
+    #om_mig .column_wide {
+        padding-right: 2rem;
+        padding-top: 1rem;
+    }
+}
+
+/*********************** PORTFOLIO BOXE FORSIDE ***********************/
+
+#mit_portfolio h2 {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+/*Overskrift i boxene*/
+#mit_portfolio h4 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 6rem;
+    margin-bottom: auto;
+}
+
+/*Skrift i boxene*/
+#mit_portfolio h5 {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+
+}
+
+#mit_portfolio .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*parrent til de mange boxe*/
+#mit_portfolio .container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/*boxene hvori der skal stå de forskellige opgaver, som du kan trykke dig ind på*/
+.box {
+    height: 260px;
+    width: 260px;
+
+    background-color: #F4A009;
+    flex-grow: 1;
+    margin: 14px;
+    border-radius: 4px;
+}
+
+#box1 {
+    background-color: #E692D9;
+}
+
+#box1:hover {
+    background-color: #BA76B0;
+
+}
+
+#box2 {
+    background-color: #FFC810;
+}
+
+#box2:hover {
+    background-color: #FFB500;
+}
+
+#box3 {
+    background-color: #5474A6;
+}
+
+#box3:hover {
+    background-color: #455F87;
+}
+
+#box4 {
+    background-color: #98A61D;
+}
+
+#box4:hover {
+    background-color: #707A16;
+}
+
+#box5 {
+    background-color: #8ED4ED;
+}
+
+#box5:hover {
+    background-color: #6DABBF;
+}
+
+#box6 {
+    background-color: #FF5F54;
+}
+
+#box6:hover {
+    background-color: #D64942;
+}
+
+#box7 {
+    background-color: #F4A009;
+}
+
+#box7:hover {
+    background-color: #E39108;
+}
+
+#box8 {
+    background-color: #B9D6CC;
+}
+
+#box8:hover {
+    background-color: #A3BDB4;
+}
+
+
+/* unvisited link */
+/* visited link */
+/* selected link */
+#mit_portfolio a,
+#mit_portfolio a:link,
+#mit_portfolio a:visited,
+#mit_portfolio a:active {
+    text-decoration: none;
+    color: black;
+}
+
+/*********************** ALLE PORTFOLIO SIDER ***********************/
+
+
+/* Boks med link til de forskellige opgaver*/
+/* unvisited link */
+/* visited link */
+/* selected link */
+.column_link a:link,
+.column_link a:visited {
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1rem;
+    padding: 1rem;
+    color: black;
+    background-color: #E18A08;
+    border-radius: 4px;
+}
+
+.column_link a:active {
+    text-decoration: none;
+    color: black;
+
+}
+
+.column_link li {
+    list-style-type: none;
+    padding: 1.8rem;
+}
+
+
+h3 {
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h4 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+
+/* giver mellemrum mellem billedet der ligger under */
+#billede_tema1_responsive2,
+#billede_tema1_responsive4,
+#billede_tema2_pilot1,
+#billede_tema2_redesign2,
+#billede_tema3_animation2,
+#tema4_keatlogo {
+    padding-bottom: 0.5rem;
+}
+
+/* giver mellemrum mellem billedet der ligger over */
+#billede_tema2_pilot2,
+#billede_tema2_redesign3,
+#tema4_keatlogo {
+    padding-top: 0.5rem;
+}
+
+
+/*********************** TEMA 1 RESPONSIVE SITE ***********************/
+
+
+.container_tema1_top {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column_tema1_left {
+    flex-grow: 1;
+    flex-basis: 300px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.column_tema1_right {
+    flex-grow: 1;
+    flex-basis: 300px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.column1_tema1_left {
+    flex-grow: 4;
+    flex-basis: 300px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.column2_tema1_right {
+    flex-grow: 1;
+    flex-basis: 300px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#tema_1_responsivesite .column_link a:link,
+#tema_1_responsivesite .column_link a:visited {
+    background-color: #E692D9;
+}
+
+#tema_1_responsivesite .column_link a:hover {
+    background-color: #BA76B0;
+}
+
+
+@media only screen and (min-width:648px) {
+
+    .column_tema1_left,
+    .column_tema1_right {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .column1_tema1_left {
+        margin-left: 1rem;
+        margin-right: 3rem;
+    }
+
+    .column1_tema1_right {
+        margin-left: 2rem;
+    }
+
+    .column_tema1_right h5 {
+        margin-top: 0;
+    }
+}
+
+.container_tema1_bottom {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column_tema1_1 {
+    flex-grow: 7;
+    flex-basis: 400px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.column_tema1_2 {
+    flex-grow: 2.2;
+    flex-basis: 200px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media only screen and (min-width: 648px) {
+
+    #billede_tema1_responsive2,
+    #billede_tema1_responsive4 {
+        margin-left: 4rem;
+        margin-right: 4rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    #billede_tema1_responsive4 {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-left: 2rem;
+        margin-right: 4rem;
+    }
+}
+
+@media only screen and (max-width: 648px) {
+
+    #billede_tema1_responsive2,
+    #billede_tema1_responsive4 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/*********************** TEMA 2 PILOTOPGAVE ***********************/
+
+#tema_2_pilotopgave .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#tema_2_pilotopgave .column {
+    flex-grow: 1;
+    flex-basis: 350px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#tema_2_pilotopgave .column_link a:link,
+#tema_2_pilotopgave .column_link a:visited {
+    background-color: #FFC810;
+}
+
+#tema_2_pilotopgave .column_link a:hover {
+    background-color: #FFB500;
+}
+
+@media only screen and (min-width:1230px) {
+
+    #video_pilotprojekt iframe {
+        width: 380px;
+        height: 214px;
+    }
+}
+
+/*********************** TEMA 2 REDESIGN ***********************/
+
+
+.column1,
+.column2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#tema_2_redesign .top {
+    flex-grow: 3;
+    /*Den skal fylde tre gange så meget som bottom*/
+    flex-basis: 400px;
+    /*betyder at billedet skal være minimum 450px for at top og bottom ligger sig ved siden af hinanden.*/
+}
+
+#tema_2_redesign .bottom {
+    flex-grow: 1;
+    flex-basis: 400px;
+}
+
+
+#tema_2_redesign .top2 {
+    flex-grow: 1;
+    /*Den skal fylde tre gange så meget som bottom*/
+    flex-basis: 350px;
+    /*betyder at billedet skal være minimum 450px for at top og bottom ligger sig ved siden af hinanden.*/
+}
+
+#tema_2_redesign .bottom2 {
+    flex-grow: 16;
+    flex-basis: 400px;
+}
+
+
+#tema_2_redesign .column_link {
+    margin-top: 1.8rem;
+    margin-bottom: 1.8rem;
+}
+
+#tema_2_redesign .column_link a:link,
+#tema_2_redesign .column_link a:visited {
+    background-color: #5474A6;
+}
+
+#tema_2_redesign .column_link a:hover {
+    background-color: #455F87;
+}
+
+@media only screen and (min-width:848px) {
+
+    #tema_2_redesign .top,
+    #tema_2_redesign .bottom {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    #tema_2_redesign h5 {
+        margin-top: 0;
+    }
+
+    #tema_2_redesign .top2 {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    #tema_2_redesign .column1 {
+        margin-bottom: 2rem;
+    }
+
+    #tema_2_redesign .column2 {
+        margin-top: 2rem;
+    }
+}
+
+/*********************** TEMA 3 ANIMATION ***********************/
+
+#tema_3_animationsopgave .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#tema_3_animationsopgave .column {
+    flex-grow: 1;
+    flex-basis: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+tema_3_animationsopgave .column_link {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+}
+
+#tema_3_animationsopgave .column_link a:link,
+#tema_3_animationsopgave .column_link a:visited {
+    background-color: #98A61D;
+}
+
+#tema_3_animationsopgave .column_link a:hover {
+    background-color: #707A16;
+}
+
+/*********************** TEMA 3 SEX OG SAMFUND ***********************/
+
+#tema_3_sex_og_samfund .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#tema_3_sex_og_samfund .column {
+    flex-grow: 1;
+    flex-basis: 350px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#tema_3_sex_og_samfund .column_link {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+#tema_3_sex_og_samfund .column_link a:link,
+#tema_3_sex_og_samfund .column_link a:visited {
+    background-color: #8ED4ED;
+}
+
+#tema_3_sex_og_samfund .column_link a:hover {
+    background-color: #6DABBF;
+}
+
+/*********************** TEMA 4 DESIGN SPRINT ***********************/
+
+
+#tema_4_design_sprint .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#tema_4_design_sprint .column {
+    flex-grow: 1;
+    flex-basis: 350px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#tema_4_design_sprint .column_link a:link,
+#tema_4_design_sprint .column_link a:visited {
+    background-color: #FF5F54;
+}
+
+#tema_4_design_sprint .column_link a:hover {
+    background-color: #D64942;
+}
+
+/*******************************************************/
+
+.sectionwrapper_designsprint {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column_lang {
+    flex-grow: 3.3;
+    flex-basis: 260px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.column_kort {
+    flex-grow: 1;
+    flex-basis: 260px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/*********************** TEMA 4 WEB PROTOTYPE ***********************/
+
+#tema_4_prototype .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#tema_4_prototype .column {
+    flex-grow: 1;
+    flex-basis: 350px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#tema_4_prototype .column_link a:link,
+#tema_4_prototype .column_link a:visited {
+    background-color: #F4A009;
+}
+
+#tema_4_prototype .column_link a:hover {
+    background-color: #E39108;
+}
+
+/*********************** TEMA 4 NATIVE APP ***********************/
+
+#tema_4_native_app .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#tema_4_native_app .column {
+    flex-grow: 1;
+    flex-basis: 350px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#tema4_keatlogo {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+#tema_4_native_app .column_link a:link,
+#tema_4_native_app .column_link a:visited {
+    background-color: #B9D6CC;
+}
+
+#tema_4_native_app .column_link a:hover {
+    background-color: #A3BDB4;
+}
+
+/*********************** BOTTOM MEDIA ***********************/
+
+/* mellemrum mellem de 3 kolonner når de ligger ved siden af hinanden i fuld skærm */
+@media only screen and (min-width:750px) {
+
+    .column {
+        margin-left: 0.8rem;
+        margin-right: 0.8rem;
+    }
+
+    #tema_4_design_sprint .column_link {
+        margin: 2rem;
+    }
+
+    #tema_4_design_sprint .column_lang {
+        margin-left: 1.8rem;
+    }
+}
+
+
+/*når skærmen er max 880px*/
+@media only screen and (max-width:880px) {
+
+    #tema4_native3,
+    #billede_tema2_pilot1,
+    #billede_tema3_projekt3,
+    #billede_tema3_animation3,
+    #billede_tema4_designsprint2,
+    #billede_tema4_web2,
+    #billede_tema4_web4,
+    #billede_tema3_animation3 {
+        margin-top: 1rem;
+    }
+
+    #billede_tema3_animation2 {
+        padding-top: 2rem;
+    }
+}
+
+@media only screen and (min-width:880px) {
+
+    /* tema 2 pilotprojekt. Så teksten bliver lidt længere så den passer med de andre tekstbokse*/
+    #bottom1 {
+        margin-right: 2rem;
+    }
+
+    /*gør at billederne i fuld skrærm ikke er så store*/
+    #tema4_native1,
+    #tema4_native2,
+    #tema4_native3,
+    #tema4_keatlogo {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    #tema4_keatlogo {
+        margin-right: 3.5rem;
+        margin-top: 2rem;
+    }
+
+    .designsprint_h5 h5 {
+        margin-top: 0;
+    }
+
+    #billede_tema4_designsprint1,
+    #billede_tema4_designsprint2 {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .sectionwrapper_designsprint {
+        margin-top: 2rem;
+    }
+
+    #billede_tema4_web4 {
+        padding-top: 0;
+    }
+
+    #billede_tema4_web4 {
+        margin-left: 0.28rem;
+    }
+
+    #billede_tema4_web1 {
+        margin-right: 0.6rem;
+    }
+}
