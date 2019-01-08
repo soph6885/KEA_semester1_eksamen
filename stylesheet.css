@@ -132,6 +132,16 @@ header nav a {
     padding: 0.3rem;
 }
 
+#svane_logo {
+    background-image: url("materiale/s_logo.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 135px;
+    height: 45px;
+    margin: 0.5rem 0 0 0.8rem;
+    position: absolute;
+}
+
 /*********************** BURGER MENU ***********************/
 
 /* når burgermenuen er lukket */
@@ -179,7 +189,7 @@ header nav a {
     }
 }
 
-/*********************** FORSIDE LOGO ***********************/
+/*********************** FORSIDE BILLEDE/SKRIFT ***********************/
 
 #forside {
     max-width: none;
@@ -189,14 +199,15 @@ header nav a {
 
 #text {
     text-align: center;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 5rem;
+    padding-bottom: 2.3rem;
 }
 
 #text h1 {
-    font-size: 4rem;
+    font-size: 2.6rem;
     margin-bottom: 0;
-    font-family: 'Caveat', cursive;
+    letter-spacing: 2.3px;
+    text-transform: uppercase;
 }
 
 #text h4 {
@@ -742,7 +753,7 @@ h5 {
 
 #tema_3_animationsopgave .column {
     flex-grow: 1;
-    flex-basis: 350px;
+    flex-basis: 300px;
     display: flex;
     flex-direction: column;
 }
@@ -761,6 +772,46 @@ h5 {
 
 #tema_3_animationsopgave .column_link a:hover {
     background-color: #707A16;
+}
+
+@media only screen and (min-width:1041px) {
+    #under_zebra h5 {
+        margin-top: 1rem;
+    }
+
+    #billede_tema3_animation2,
+    #billede_tema3_animation1 {
+        margin-top: 1.5rem;
+        margin-bottom: 0.2rem;
+    }
+}
+
+/******* ZEBRA SPRITE *****/
+
+#zebra_sprite {
+    animation: zebra_er_glad;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(3);
+    background-image: url(materiale/sprite_med_zebra.svg);
+    background-size: 300% 100%;
+    width: 260px;
+    height: 260px;
+    top: 20vw;
+    left: 50vw;
+    margin: auto;
+
+}
+
+
+@keyframes zebra_er_glad {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -300%;
+    }
 }
 
 /*********************** TEMA 3 SEX OG SAMFUND ***********************/
@@ -932,11 +983,9 @@ h5 {
     #tema4_native3,
     #billede_tema2_pilot1,
     #billede_tema3_projekt3,
-    #billede_tema3_animation3,
     #billede_tema4_designsprint2,
     #billede_tema4_web2,
-    #billede_tema4_web4,
-    #billede_tema3_animation3 {
+    #billede_tema4_web4 {
         margin-top: 1rem;
     }
 
