@@ -136,10 +136,14 @@ header nav a {
     background-image: url("materiale/s_logo.svg");
     background-repeat: no-repeat;
     background-size: 100%;
-    width: 135px;
-    height: 45px;
+    width: 120px;
+    height: 40px;
     margin: 0.5rem 0 0 0.8rem;
     position: absolute;
+}
+
+#svane_logo:hover {
+    opacity: 0.7;
 }
 
 /*********************** BURGER MENU ***********************/
@@ -193,8 +197,12 @@ header nav a {
 
 #forside {
     max-width: none;
-    background-color: #F4A009;
+    /*    background-color: #F4A009;*/
     /* her kan jeg evt. indsætte et splashbillede og lave parallex scroll på */
+    background-image: url("materiale/mobile_splash1.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
 }
 
 #text {
@@ -270,6 +278,7 @@ header nav a {
     flex-basis: 200px;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+    margin-top: 1rem;
 }
 
 /*Billedet af mig*/
@@ -279,25 +288,10 @@ header nav a {
     background-size: 100%;
     width: 300px;
     height: 300px;
-    margin: 1rem;
+    margin: auto;
 }
 
 /*********************** @MEDIA --- OM MIG FORSIDE ***********************/
-
-/*Når skærmen er under og max 827px skal teksten være i venstre side under billedet*/
-@media only screen and (max-width:827px) {
-    #om_mig .column_narrow p {
-        text-align: left;
-    }
-}
-
-/*Når skærmen er under og max 504px skal teksten være centreret i midten under billedet*/
-@media only screen and (max-width:504px) {
-    #om_mig .column_narrow p {
-        text-align: center;
-    }
-
-}
 
 /*Når skærmen er over 844px har jeg tilføjet ekstra padding i højre side på boxen med tekst for at lave mellemrum mellem tekst og billede*/
 @media only screen and (min-width:844px) {
