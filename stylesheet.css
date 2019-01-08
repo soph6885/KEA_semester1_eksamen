@@ -197,18 +197,22 @@ header nav a {
 
 #forside {
     max-width: none;
-    /*    background-color: #F4A009;*/
-    /* her kan jeg evt. indsætte et splashbillede og lave parallex scroll på */
-    background-image: url("materiale/mobile_splash1.png");
+    background-image: url("materiale/forside_splash2.png");
     background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
+    background-size: cover;
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #text {
     text-align: center;
-    padding-top: 5rem;
-    padding-bottom: 2.3rem;
+    padding-top: 6rem;
+    padding-bottom: 2.2rem;
 }
 
 #text h1 {
@@ -232,8 +236,18 @@ header nav a {
         letter-spacing: 10px;
         text-transform: uppercase;
     }
+
+    #text {
+        padding-top: 8rem;
+        padding-bottom: 4rem;
+    }
 }
 
+@media only screen and (max-width:1000px) {
+    #forside {
+        background-attachment: scroll;
+    }
+}
 
 /*********************** OM MIG FORSIDE ***********************/
 
