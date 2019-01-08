@@ -1,20 +1,22 @@
 body {
-    /*font-family: 'Major Mono Display', monospace;*/
     margin: 0;
-    font-family: 'Nanum Myeongjo', serif;
     background-color: #ffffff;
+    font-family: 'Lato', sans-serif;
+}
+
+h2,
+h3,
+h4,
+h5 {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    /*    font-weight:*/
 }
 
 section {
     max-width: 1230px;
     margin: 0 auto;
-    padding: 1.5rem 2rem 2rem 2rem
-}
-
-footer {
-    padding: 0.6rem;
-    background-color: #F4A009;
-    padding-left: 2.5rem;
+    padding: 1.5rem 1.5rem 2rem 1.5rem;
 }
 
 img {
@@ -36,7 +38,12 @@ footer {
     background-color: #F4A009;
 }
 
-footer p {}
+footer p {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    /*    font-weight: 600;*/
+}
 
 .container_footer {
     display: flex;
@@ -116,7 +123,7 @@ header nav {
 /* selve teksten */
 header nav a {
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 600;
     padding: 0.3rem;
 }
@@ -612,11 +619,19 @@ h5 {
     background-color: #FFB500;
 }
 
-@media only screen and (min-width:1230px) {
+@media only screen and (min-width:1220px) {
 
     #video_pilotprojekt iframe {
-        width: 380px;
-        height: 214px;
+        width: 367px;
+        height: 206px;
+    }
+}
+
+@media only screen and (min-width:1260px) {
+
+    #video_pilotprojekt iframe {
+        width: 382px;
+        height: 215px;
     }
 }
 
@@ -939,5 +954,11 @@ tema_3_animationsopgave .column_link {
 
     #billede_tema4_web1 {
         margin-right: 0.6rem;
+    }
+}
+
+@media only screen and (min-width:1230px) {
+    section {
+        padding: 1.5rem 2rem 2rem 2rem;
     }
 }
