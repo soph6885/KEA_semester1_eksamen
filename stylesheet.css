@@ -15,7 +15,11 @@ h5 {
 section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1.5rem 1.5rem 2rem 1.5rem;
+    padding: 1.5rem 2rem 4rem 2rem;
+}
+
+.sectionwrapper {
+    margin-top: 3.5rem;
 }
 
 img {
@@ -165,7 +169,7 @@ header nav a {
 }
 
 /*Når skærmen er under og max 550px skal burgermenuen vises.*/
-@media only screen and (max-width:550px) {
+@media only screen and (max-width:623px) {
     .hide_burgermenu {
         display: block;
     }
@@ -185,8 +189,8 @@ header nav a {
 
 #text {
     text-align: center;
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 #text h1 {
@@ -233,8 +237,8 @@ header nav a {
     flex-grow: 2;
     /* gør så column_wide fylder dobbelt så meget som column_narrow */
     flex-basis: 400px;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 /*Box/parrent til billede af mig*/
@@ -440,13 +444,14 @@ header nav a {
 
 h3 {
     text-align: center;
-    margin-top: 4rem;
-    font-size: 2rem;
+    margin-top: 4.5rem;
+    font-size: 1.8rem;
 }
 
 h4 {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
 }
 
 h5 {
@@ -502,7 +507,7 @@ h5 {
 }
 
 .column1_tema1_left {
-    flex-grow: 4;
+    flex-grow: 2;
     flex-basis: 300px;
 
     display: flex;
@@ -606,6 +611,11 @@ h5 {
 
 /*********************** TEMA 2 PILOTOPGAVE ***********************/
 
+#tema_2_pilotopgave .column_link {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
 #tema_2_pilotopgave .sectionwrapper {
     display: flex;
     flex-wrap: wrap;
@@ -629,12 +639,12 @@ h5 {
 }
 
 #video_pilotprojekt .video {
-    width: 352px;
-    height: 198px;
+    width: 340px;
+    height: 191px;
     border: 0px;
 }
 
-@media only screen and (min-width:1205px) {
+@media only screen and (min-width: 1210px) {
 
     #video_pilotprojekt .video {
         width: 367px;
